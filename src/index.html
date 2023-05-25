@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      background-color:beige;
+    }
+    form{
+      width: 350px;
+    }
+    input{
+      margin: 5px;
+    }
+    h1 , p{
+      text-align: center;
+    }
+    form{
+      margin:auto;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>AngularMe</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <app-root> Registration Form</app-root>
+  <h1>Registration Form</h1>
+  <p> Fill your details</p>
+  <form action="Server URL">
+    <fieldset>
+      <i class="fas fa-user"></i>
+      <label for="Firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname"><br>
+      <label for="Lastname">Last Name:</label>
+      <input type="text" id="Lastname" name="Lastname"><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password"name="password"><br>
+      <label for="number"> phone number:</label>
+      <input type="number" id="number"name="number"><br>
+      <label for="Gender">Gender:</label>
+      <input type="radio" id="male"name="gender">male
+      <input type="radio" id="female"name="gender">female
+      <input type="radio" id="other"name="gender">other
+      <label for="date">D.O.B:</label>
+      <input type="date" id="Birthday"name="Birthday"><br>
+      <input type="submit" value="submit">
+
+    </fieldset>
+  </form>
+</body>
+</html>

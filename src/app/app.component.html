@@ -1,0 +1,84 @@
+<!---
+<div class="container">
+ <app-header></app-header>
+ <router-outlet></router-outlet>
+  <app-tasks></app-tasks>   
+</div>
+<h1>Registration Form</h1>
+<div class="container">
+  <h2>Register Now</h2>
+  <form #register= "ngForm" (ngSubmit)="submit(register)" >
+    <div class = "formGroup">
+      <label for="fullname">Full Name:</label><br>
+      <input type = "text" id="fullname" name="fullname" class="form-control" ngModel>
+    </div>
+      <i class="fas fa-user"></i>
+    <div class = "formGroup">
+      <label for="username">User Name:</label><br>
+      <input type = "text"id="username" name="username" class="form-control" ngModel>
+    </div>
+    <div class = "formGroup">
+      <label for="email">Email Address:</label><br>
+      <input type = "text"  id="Email" name="Email" class="form-control"ngModel>
+    </div>
+    <div class = "formGroup">
+      <label for="password">Password:</label><br>
+      <input type = "text" id="password" name="password" class="form-control"ngModel>
+    </div>
+    <div class = "formGroup">
+      <label for="Number"> Phone Number:</label><br>
+      <input type = "text" id="Number" name="Number" class="form-control"ngModel>
+    </div>
+    <div class="formGroup">
+      <i class="fas fa-venus-mars"></i>
+      <label for="Gender">Gender:</label>
+      <input type="radio" id="male"name="gender" class="form-control" ngModel> male
+      <input type="radio" id="female"name="gender" class="form-control" ngModel> female
+      <input type="radio" id="other"name="gender" class="form-control" ngModel> other
+    </div>
+    <div class="formGroup">
+      <i class="fas fa-calendar-day"></i>
+      <label for="date"> D.O.B : </label>
+      <input type="date" id="Birthday"name="Birthday" class="form-control"ngModel>
+    </div>
+    <i class="fas fa-cloud"></i>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>-->
+<h1>Register Form</h1>
+<form [formGroup]="register" class="container">
+  <i class="fas fa-user"></i>
+  Full Name :
+  <input type = "text" formControlName="fullname" class="form-control w-50 m-2" ngModel><br>
+  <i class="fas fa-user-tie"></i>
+  User Name :
+  <input type = "text" formControlName="name" class="form-control w-50 m-2"  ngModel><br>
+  <i class="fas fa-envelope"></i>
+  Email id:
+  <input type = "email" formControlName="email" class="form-control w-50 m-2"  ngModel><br>
+  <i class="fas fa-key"></i>
+  Password:
+  <input type = "password" formControlName="password" class="form-control w-50 m-2"  ngModel><br>
+  <i class="fas fa-phone"></i>
+  Contcat :
+  <input type = "text" formControlName="number" class="form-control w-50 m-2"  ngModel><br>
+  <i class="fas fa-venus-mars"></i>
+  Gender:
+  <input type = "radio" formControlName="male" class="form-control w-50 m-2"  ngModel>male
+  <input type= "radio" formControlName="female" class="form-control w-50 m-2" ngModel>female
+  <input type="radio" formControlName="other"  class="form-control w-50 m-2" ngModel> other<br>
+  <i class="fas fa-calendar-day"></i>
+  Date of Birth :
+  <input type = "date" formControlName="Birthday" class="form-control w-50 m-2"  ngModel><br>
+  <button class="btn btn-primary"  (click)="register1()">submit </button>
+</form>
+<h1>Login Form</h1>
+<form [formGroup]="login" class="container">
+  <i class="fas fa-envelope"></i>
+  Email:
+  <input type="text" class="form-control w-50 m-2" formControlName="email" ngModel><br>
+  <i class="fas fa-key"></i>
+  password:
+  <input type="password" class="form-control w-50 m-2" formControlName="password" ngModel><br>
+  <button class="btn btn-primary"  (click)="login1()">submit </button>
+</form>
